@@ -2,4 +2,5 @@
 
 Utilizando
 
+* Lombok
 * Spring Data JPA
