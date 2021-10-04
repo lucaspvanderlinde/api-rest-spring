@@ -1,5 +1,7 @@
 # Api Rest com Spring Boot 
 
+Projeto de estudo utilizando algumas tecnologias e conhecimentos com Spring Boot
+
 Utilizando
 
 * Lombok
