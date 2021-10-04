@@ -1,3 +1,5 @@
-# api-rest-spring-boot
+# Api Rest com Spring Boot 
 
-Api Rest com Spring Boot 
+Utilizando
+
+* Spring Data JPA
