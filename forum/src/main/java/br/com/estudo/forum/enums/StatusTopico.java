@@ -1,4 +1,4 @@
-package br.com.estudo.forum.model;
+package br.com.estudo.forum.enums;
 
 public enum StatusTopico {
 	
