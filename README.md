@@ -3,4 +3,4 @@
 Utilizando
 
 * Lombok
-* Spring Data JPA
+* Spring Data JPA e Hibernate
