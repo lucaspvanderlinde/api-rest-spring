@@ -16,12 +16,12 @@ public class TopicoServiceImpl implements TopicoService {
 	private TopicoRepository topicoRepositoty;
 
 	@Override
-	public List<Topico> findAll() {
+	public List<Topico> buscarTodos() {
 		return topicoRepositoty.findAll();
 	}
 
 	@Override
-	public Topico save(Topico topico) {
+	public Topico cadastrar(Topico topico) {
 		return topicoRepositoty.save(topico);
 	}
 

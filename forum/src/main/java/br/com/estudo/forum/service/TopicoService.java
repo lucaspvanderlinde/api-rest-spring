@@ -11,14 +11,15 @@ public interface TopicoService {
 	 * 
 	 * @return List<Topico>
 	 */
-	List<Topico> findAll();
+	List<Topico> buscarTodos();
 	
 	/**
-	 * Salva um topico na base de dados.
+	 * Cadastrar um topico na base de dados.
 	 * 
 	 * @param topico
 	 * @return Topico
 	 */
-	Topico save(Topico topico);
+	Topico cadastrar(Topico topico);
+	
 
 }

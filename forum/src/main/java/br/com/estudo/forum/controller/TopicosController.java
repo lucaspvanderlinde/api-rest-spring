@@ -27,13 +27,13 @@ public class TopicosController {
 	
 	@GetMapping
 	public ResponseEntity<List<TopicoDto>> lista() {
-		List<TopicoDto> topicos = TopicoDto.converter(topicoService.findAll());
+		List<TopicoDto> topicos = TopicoDto.converter(topicoService.buscarTodos());
 		return ResponseEntity.ok(topicos);
 	}
 	
 	@PostMapping
 	public ResponseEntity<Topico>cadastrar(@RequestBody @Valid Topico topico, UriComponentsBuilder uriBuilder) {
-		topicoService.save(topico);
+		topicoService.cadastrar(topico);
 		URI uri = uriBuilder.path("/topicos/{id}").buildAndExpand(topico.getId()).toUri();
 		return ResponseEntity.created(uri).body(topico);
 	}
