@@ -12,6 +12,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 import br.com.estudo.forum.enums.StatusTopico;
 import lombok.AllArgsConstructor;
@@ -28,7 +30,10 @@ public class Topico {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@NotNull @NotEmpty
 	private String titulo;
+	@NotNull @NotEmpty
 	private String mensagem;
 	private LocalDateTime dataCriacao;
 	
