@@ -8,17 +8,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.estudo.forum.dtos.TopicoDto;
 import br.com.estudo.forum.model.Topico;
-import br.com.estudo.forum.repository.TopicoRepository;
+import br.com.estudo.forum.service.TopicoService;
 
 @RestController
 public class TopicosController {
 	
 	@Autowired
-	private TopicoRepository topicoRepositoty;
+	private TopicoService topicoService;
 	
 	@RequestMapping("/topicos")
 	public List<TopicoDto> lista() {
-		List<Topico> topicos = topicoRepositoty.findAll();
+		List<Topico> topicos = topicoService.findAll();
 		return TopicoDto.converter(topicos);
 	}
 
