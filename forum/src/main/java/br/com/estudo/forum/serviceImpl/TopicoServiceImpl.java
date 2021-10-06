@@ -20,4 +20,9 @@ public class TopicoServiceImpl implements TopicoService {
 		return topicoRepositoty.findAll();
 	}
 
+	@Override
+	public Topico save(Topico topico) {
+		return topicoRepositoty.save(topico);
+	}
+
 }
