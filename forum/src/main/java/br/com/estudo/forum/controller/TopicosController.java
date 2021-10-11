@@ -26,7 +26,7 @@ public class TopicosController {
 	private TopicoService topicoService;
 	
 	@GetMapping
-	public ResponseEntity<List<TopicoDto>> lista() {
+	public ResponseEntity<List<TopicoDto>>lista() {
 		List<TopicoDto> topicos = TopicoDto.converter(topicoService.buscarTodos());
 		return ResponseEntity.ok(topicos);
 	}

@@ -21,5 +21,13 @@ public interface TopicoService {
 	 */
 	Topico cadastrar(Topico topico);
 	
+	/**
+	 * Busca um topico por ID
+	 * 
+	 * @param id
+	 * @return
+	 */
+	Topico buscarPorId(Long id);
+	
 
 }
