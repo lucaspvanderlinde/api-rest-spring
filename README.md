@@ -1,9 +1,16 @@
-## Api Rest com Spring Boot 
+## API REST 
 
-Projeto utilizando algumas tecnologias e conhecimentos com Spring Boot
+Construindo uma API REST com Java, Spring Boot e Hibernate
 
-Utilizando
+Estrutura do projeto baseada no padrão MVC, compostas pelos pacotes: model, dto, repository, service, serviceImpl e controller
+justamente para separar a responsabilidade de cada uma.
 
-* Lombok
-* Spring Data JPA e Hibernate
-* Banco de Dados H2
+Tecnologias utilizadas
+
+* Linguagem Java
+* Spring Boot
+* Spring Web
+* Spring Data JPA
+* Hibernate
+* Banco H2
+* Biblioteca Lombok
