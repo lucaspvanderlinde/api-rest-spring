@@ -1,6 +1,7 @@
 package br.com.estudo.forum.serviceImpl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,8 +27,8 @@ public class TopicoServiceImpl implements TopicoService {
 	}
 
 	@Override
-	public Topico buscarPorId(Long id) {
-		return topicoRepositoty.findById(id).get();
+	public Optional<Topico> buscarPorId(Long id) {
+		return topicoRepositoty.findById(id);
 	}
 
 	@Override

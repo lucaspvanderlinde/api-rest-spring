@@ -2,6 +2,7 @@ package br.com.estudo.forum.controller;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -20,7 +21,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 import br.com.estudo.forum.dtos.TopicoDto;
 import br.com.estudo.forum.model.Topico;
 import br.com.estudo.forum.service.TopicoService;
-import lombok.Delegate;
 
 @RestController
 @RequestMapping("/topicos")
@@ -43,19 +43,36 @@ public class TopicosController {
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Topico>buscarPorId(@PathVariable Long id) {
-		Topico topico = topicoService.buscarPorId(id);
+	public ResponseEntity<Optional<Topico>>buscarPorId(@PathVariable Long id) {
+		Optional<Topico> topico = topicoService.buscarPorId(id);
+		
+		if (!topico.isPresent()) {
+			return ResponseEntity.notFound().build();
+		}
+		
 		return ResponseEntity.ok(topico);
 	}
 	
 	@PutMapping("/{id}")
 	public ResponseEntity<Topico>atualizar(@PathVariable Long id, @RequestBody @Valid Topico topico) {
+		Optional<Topico> optional = topicoService.buscarPorId(id);
+		
+		if (!optional.isPresent()) {
+			return ResponseEntity.notFound().build();
+		}
+		
 		Topico novoTopico = topicoService.atualizar(topico);
 		return ResponseEntity.ok(novoTopico);
 	}
 	
 	@DeleteMapping("/{id}")
 	public ResponseEntity<?>remover(@PathVariable Long id) {
+		Optional<Topico> optional = topicoService.buscarPorId(id);
+		
+		if (!optional.isPresent()) {
+			return ResponseEntity.notFound().build();
+		}
+		
 		topicoService.remover(id);
 		return ResponseEntity.ok().build();
 	}

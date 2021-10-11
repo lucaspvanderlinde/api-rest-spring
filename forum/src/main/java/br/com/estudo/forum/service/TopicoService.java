@@ -1,6 +1,7 @@
 package br.com.estudo.forum.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import br.com.estudo.forum.model.Topico;
 
@@ -27,7 +28,7 @@ public interface TopicoService {
 	 * @param id
 	 * @return
 	 */
-	Topico buscarPorId(Long id);
+	Optional<Topico> buscarPorId(Long id);
 	
 	/**
 	 * Atualiza um topico
