@@ -29,5 +29,19 @@ public interface TopicoService {
 	 */
 	Topico buscarPorId(Long id);
 	
+	/**
+	 * Atualiza um topico
+	 * 
+	 * @param topico
+	 * @return
+	 */
+	Topico atualizar(Topico topico);
+	
+	/**
+	 * Remove um topico
+	 * 
+	 * @param id
+	 */
+	void remover(Long id);
 
 }

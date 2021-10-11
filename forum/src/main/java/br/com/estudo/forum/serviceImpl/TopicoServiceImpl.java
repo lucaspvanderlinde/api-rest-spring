@@ -30,4 +30,14 @@ public class TopicoServiceImpl implements TopicoService {
 		return topicoRepositoty.findById(id).get();
 	}
 
+	@Override
+	public Topico atualizar(Topico topico) {
+		return topicoRepositoty.save(topico);
+	}
+
+	@Override
+	public void remover(Long id) {
+		topicoRepositoty.deleteById(id);
+	}
+
 }
