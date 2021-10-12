@@ -1,4 +1,4 @@
-package br.com.estudo.forum.dtos;
+package br.com.estudo.forum.model.dtos;
 
 import java.time.LocalDateTime;
 import java.util.List;

@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import br.com.estudo.forum.dtos.TopicoDto;
 import br.com.estudo.forum.model.Topico;
+import br.com.estudo.forum.model.dtos.TopicoDto;
 import br.com.estudo.forum.service.TopicoService;
 
 @RestController
