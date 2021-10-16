@@ -15,7 +15,7 @@ public interface TopicoService {
 	List<Topico> buscarTodos();
 	
 	/**
-	 * Cadastrar um topico na base de dados.
+	 * Cadastrar um topico.
 	 * 
 	 * @param topico
 	 * @return Topico
@@ -23,7 +23,7 @@ public interface TopicoService {
 	Topico cadastrar(Topico topico);
 	
 	/**
-	 * Busca um topico por ID
+	 * Busca um topico por ID.
 	 * 
 	 * @param id
 	 * @return
@@ -31,7 +31,7 @@ public interface TopicoService {
 	Optional<Topico> buscarPorId(Long id);
 	
 	/**
-	 * Atualiza um topico
+	 * Atualiza um topico.
 	 * 
 	 * @param topico
 	 * @return
@@ -39,7 +39,7 @@ public interface TopicoService {
 	Topico atualizar(Topico topico);
 	
 	/**
-	 * Remove um topico
+	 * Remove um topico.
 	 * 
 	 * @param id
 	 */
